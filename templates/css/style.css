@@ -1,0 +1,1008 @@
+/* le css pour le header */
+header {
+    position: fixed; /* Reste en haut de la page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Toujours au-dessus du reste */
+    height: 80px; /* Fixe une hauteur explicite */
+    background: #EED3C6;
+    color: #4A3F35;
+    padding: 10px;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* Logo à gauche */
+.logo a {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: #5A3E3E; 
+    text-decoration: none;
+}
+
+/*  Centrer le menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    flex: 2; /* Centre le menu */
+    justify-content: center; /* Centre les liens */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #5A3E3E; /* Marron foncé */
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #E6CFCB; /* Texte beige clair */
+    background: #5A3E3E; /* Fond marron foncé */
+}
+
+/*  Connexion & Réserver à droite */
+.account {
+    flex: 1; /* Prend l’espace à droite */
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+/*  Style général pour tous les boutons */
+.btn, .btn-account, .btn-reserver, .btn-primary, .btn-secondary {
+
+    text-align: center; 
+    padding: 8px 10px; 
+    font-size: 16px; 
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    border: 2px solid #5A3E3E; 
+    background-color:  #D4AF37; 
+    color: #5A3E3E; 
+    
+}
+
+/*  MENU RESPONSIVE (Mobile) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #5A3E3E; /* Marron foncé */
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+/*  Responsive Design */
+@media screen and (max-width: 768px)
+ {
+    h1 {
+        margin-top: 100px; /* Augmente l'espace entre le header et le titre */
+    }
+    header {
+        height: auto;
+        line-height: normal;
+        padding: 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .introduction {
+        padding: 30px;
+        margin-top: 140px; 
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block; /*  Assure que l'icône du menu hamburger est bien visible */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #5A3E3E;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #E6CFCB;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .account {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+    .account a {
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+    }
+ 
+    .why-choose-us {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 20px; 
+    }
+
+    .why-choose-us div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .why-choose-us i {
+        font-size: 30px; 
+        margin-bottom: 5px;
+    }
+
+    .why-choose-us p {
+        max-width: 90%;
+    }
+}
+
+/* ==========================
+   FOOTER - ELITE CARS RENTAL
+========================== */
+footer {
+    background: #E6CFCB; 
+    color: #5A3E3E; 
+    padding:  20px 0px ;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.footer-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+/* Colonnes */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+/* Titres des sections */
+.footer-column h3 {
+    font-size: 20px;
+    color: #5A3E3E;
+    margin-bottom: 15px;
+}
+
+/* Liens utiles */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #5A3E3E;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #D4AF37; 
+}
+.footer-column:last-child {
+    text-align: center;
+}
+
+/*  Icônes des réseaux sociaux */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #5A3E3E; 
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #D4AF37; 
+}
+
+/*  Bas de page */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(90, 62, 62, 0.2);
+    font-size: 14px;
+}
+
+
+/* css de la page accueil*/
+
+/*  Ajout d'un espacement entre les sections */
+section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/*  Espacement du texte dans les sections */
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+/*  Meilleur alignement des icônes et texte */
+.why-choose-us {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+/*  Espacement des éléments "Pourquoi nous choisir" */
+.why-choose-us div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Icônes mieux alignées */
+.why-choose-us i {
+    font-size: 24px;
+    color: #D4AF37; /* Doré */
+}
+
+
+
+
+/* Amélioration des titres */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3D1C02;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5A3E3E;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+body {
+    margin: 0 ;
+    margin-top: 100px;
+    padding: 0;
+    line-height: 1.6; /* Améliore la lisibilité */
+}
+
+
+/*  Ajuste les images pour qu'elles ne dépassent pas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*  Assurer que tous les éléments prennent bien la largeur */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 50px 15px!important; 
+    max-width: 1200px!important;
+    margin: auto!important;
+}
+
+/* 🌟 RESPONSIVE MOBILE */
+@media screen and (max-width: 768px) {
+    .hero-slider {
+        max-width: 95%;
+        height: 200px;
+    }
+}
+/* Conteneur grille */
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Carte véhicule */
+.vehicle-card {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.vehicle-card h3 {
+    font-size: 1.3rem;
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.vehicle-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #d4a017;
+    margin: 5px 0 15px;
+}
+
+.vehicle-card .btn {
+    display: inline-block;
+    margin: 10px auto 10px;
+    padding: 4px 8px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-card .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .vehicle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .vehicle-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.vl_detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #fdf9f7;
+    border-radius: 10px;
+}
+
+.vl_image {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.vl_info {
+    max-width: 400px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.vl_info h2 {
+    font-size: 2rem;
+    color: #5A3E3E;
+    margin-bottom: 10px;
+}
+
+.vl_info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #444;
+}
+
+
+
+/* Section Tarifs */
+.tarifs {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.tarifs h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5A3E3E;
+    margin-bottom: 20px;
+}
+
+/* Table responsive avec largeur maximale */
+.tarifs-table {
+    width: 100%;
+    max-width: 700px; /* limite la largeur max */
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: #F8F4F2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Cellules */
+.tarifs-table th, .tarifs-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.tarifs-table th {
+    background: #EED3C6;
+    color: #5A3E3E;
+    font-weight: bold;
+}
+
+/* Effet au survol */
+.tarifs-table tr:hover {
+    background: #f3e6e2;
+}
+
+/* Icône dans les cellules */
+.tarifs-table img {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Responsive pour petit écran */
+@media (max-width: 600px) {
+    .tarifs h2 {
+        font-size: 1.5rem;
+    }
+
+    .tarifs-table {
+        font-size: 0.9rem;
+    }
+
+    .tarifs-table th, .tarifs-table td {
+        padding: 10px;
+    }
+}
+
+/* connexion */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #FAF3EB;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container h2 {
+    font-size: 28px;
+    color: #5A3E3E;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #5A3E3E;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 37px;
+    color: #D4AF37;
+    font-size: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border: 1px solid #B68D3C;
+}
+
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #D4AF37; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #B68D3C;
+    transform: scale(1.02);
+}
+
+/*  Lien vers l'inscription */
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #D4AF37;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* contact */
+.contact-section {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    color: #5A3E3E;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/*  Informations de contact */
+.contact-info {
+    flex: 1;
+    text-align: left;
+    background: #FAF3EB; /* Beige clair */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 20px;
+    color: #5A3E3E;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #444;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/*  Formulaire de contact */
+.contact-form {
+    flex: 1;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #5A3E3E;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border: 1px solid #B68D3C;
+}
+
+/* ✅ Bouton Envoyer */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #D4AF37; /* Doré */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #B68D3C; 
+    transform: scale(1.02);
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+/* css pour les reservation */ 
+.reservation-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #FAF3EB;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reservation-container h2 {
+    color: #5A3E3E;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #D4AF37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #B68D3C;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+} 
+/* -------- ZONE PRINCIPALE DU DASHBOARD -------- */
+main.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* -------- TITRE -------- */
+main.container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* -------- TEXTE -------- */
+main.container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* -------- ZONE DES BOUTONS -------- */
+.zone-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* -------- BOUTONS -------- */
+.btn {
+    background-color: #B68D3C;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background-color:#B68D3C;
+    transform: scale(1.05);
+}
+
+.btn-supprimer {
+    background-color:#B68D3C;
+}
+
+.btn-supprimer:hover {
+    background-color: #B68D3C;
+}
+.message-box {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.success {
+    border-left: 5px solid #28a745;
+}
+
+.erreur {
+    border-left: 5px solid #dc3545;
+}
+
+.message-box p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.message-box .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.message-box .btn:hover {
+    background-color: #0056b3;
+}
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #ded2d2;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(205, 197, 197, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    font-family: sans-serif;
+}
+
+.cookie-banner p {
+    margin: 0;
+    flex: 1;
+    font-size: 16px;
+}
+
+.cookie-banner form {
+    margin-left: 20px;
+}
+
+.cookie-banner button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-banner button:hover {
+    background-color: #45a049;
+}/* ==== MENTIONS LÉGALES ==== */
+.mentions-container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 40px 30px;
+    background-color: #E6CFCB;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px #E6CFCB(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    line-height: 1.8;
+}
+
+.mentions-container h1,
+.mentions-container h2 {
+    color: #5A3E3E;
+    margin-bottom: 20px;
+}
+
+.mentions-container h1 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mentions-container h2 {
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.mentions-container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.mentions-container ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.mentions-container li {
+    margin-bottom: 10px;
+}
+
+/* 📱 Responsive Mentions Légales */
+@media screen and (max-width: 768px) {
+    .mentions-container {
+        padding: 30px 20px;
+    }
+
+    .mentions-container h1 {
+        font-size: 26px;
+    }
+
+    .mentions-container h2 {
+        font-size: 20px;
+    }
+
+    .mentions-container p,
+    .mentions-container li {
+        font-size: 15px;
+    }
+}
